@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		472E1C7CB78C64E982514CE0 /* Pods_pixel_city.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2074BEE76FBBCEEC629FFF46 /* Pods_pixel_city.framework */; };
+		CD105E2120B4CE02005A8446 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD105E2020B4CE02005A8446 /* DroppablePin.swift */; };
 		CD73886920B49DE100F33F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73886820B49DE100F33F61 /* AppDelegate.swift */; };
 		CD73886B20B49DE100F33F61 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73886A20B49DE100F33F61 /* MapVC.swift */; };
 		CD73886E20B49DE100F33F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD73886C20B49DE100F33F61 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		2074BEE76FBBCEEC629FFF46 /* Pods_pixel_city.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pixel_city.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE26C62ABCB10B10AC85065 /* Pods-pixel-city.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixel-city.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pixel-city/Pods-pixel-city.debug.xcconfig"; sourceTree = "<group>"; };
+		CD105E2020B4CE02005A8446 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		CD73886520B49DE100F33F61 /* pixel-city.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pixel-city.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD73886820B49DE100F33F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD73886A20B49DE100F33F61 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		CD73887B20B49E0F00F33F61 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CD105E2020B4CE02005A8446 /* DroppablePin.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD73886B20B49DE100F33F61 /* MapVC.swift in Sources */,
+				CD105E2120B4CE02005A8446 /* DroppablePin.swift in Sources */,
 				CD73886920B49DE100F33F61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
