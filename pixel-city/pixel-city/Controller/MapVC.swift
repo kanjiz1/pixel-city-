@@ -12,10 +12,17 @@ import CoreLocation
 
 class MapVC: UIViewController, UIGestureRecognizerDelegate {
 
+    @IBOutlet weak var pullUpViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var pullUpView: UIView!
+    
     var locationManager = CLLocationManager()
     let authorizationStatus = CLLocationManager.authorizationStatus()
     let regionRadious: Double = 1000
+    var screenSize = UIScreen.main.bounds
+
+    var spinner: UIActivityIndicatorView?
+    var progressLabel: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +32,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         addDoubleTap()
     }
     
+    //double tap gesture
     func addDoubleTap(){
         let doubleTap = UITapGestureRecognizer(target: self, action: #selector(dropPin(sender:)))
         doubleTap.numberOfTapsRequired = 2
@@ -32,9 +40,44 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         mapView.addGestureRecognizer(doubleTap)
     }
     
+    //swipe down gesture to hide view
+    func addSwipe(){
+        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(animateViewDown))
+        swipe.direction = .down
+        pullUpView.addGestureRecognizer(swipe)
+    }
+    
+    //animates bottom view upwards
+    func animateViewUp(){
+        pullUpViewHeightConstraint.constant = 300
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    //animates bottom view downwards
+    @objc func animateViewDown(){
+        pullUpViewHeightConstraint.constant = 0
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func addSpinner(){
+        spinner = UIActivityIndicatorView()
+        spinner?.center = CGPoint(x: screenSize.width / 2 - ((spinner?.frame.width)! / 2), y: 150)
+        spinner?.activityIndicatorViewStyle = .whiteLarge
+        spinner?.color = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        spinner?.startAnimating()
+        pullUpView.addSubview(spinner!)
+    }
+    
     //drops map pin
     @objc func dropPin(sender: UITapGestureRecognizer){
         removePin()
+        animateViewUp()
+        addSwipe()
+        addSpinner()
         let touchPoint = sender.location(in: mapView)
         let touchCoordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
         
@@ -48,6 +91,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         print(touchPoint)
     }
     
+    //removes pin from map
     func removePin(){
         for annotation in mapView.annotations{
             mapView.removeAnnotation(annotation)

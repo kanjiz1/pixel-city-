@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTL-H2-rsb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqW-wB-ONh">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
@@ -47,7 +47,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpo-BL-otb">
-                                <rect key="frame" x="309" y="617" width="50" height="50"/>
+                                <rect key="frame" x="309" y="596" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="dv3-HC-mWd"/>
                                     <constraint firstAttribute="height" constant="50" id="tj1-n9-pf3"/>
@@ -57,15 +57,16 @@
                                     <action selector="centerMapBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gow-TL-yhg"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xau-5d-0k6">
-                                <rect key="frame" x="0.0" y="661" width="375" height="0.0"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xau-5d-0k6">
+                                <rect key="frame" x="0.0" y="666" width="375" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="E4U-p3-JsB"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CHz-9o-YWZ" firstAttribute="top" secondItem="Vpo-BL-otb" secondAttribute="bottom" constant="20" id="0bu-lc-WNL"/>
-                            <constraint firstItem="xau-5d-0k6" firstAttribute="top" secondItem="CHz-9o-YWZ" secondAttribute="bottom" id="1X6-Th-Nwp"/>
                             <constraint firstItem="oqW-wB-ONh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="55N-OS-Lhl"/>
                             <constraint firstAttribute="trailing" secondItem="iTL-H2-rsb" secondAttribute="trailing" id="5Qt-lD-rgG"/>
                             <constraint firstAttribute="trailing" secondItem="oqW-wB-ONh" secondAttribute="trailing" id="62q-6Y-FFo"/>
@@ -73,14 +74,17 @@
                             <constraint firstItem="oqW-wB-ONh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9nh-T7-Ajb"/>
                             <constraint firstItem="xau-5d-0k6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FKK-n7-Nhv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vpo-BL-otb" secondAttribute="trailing" id="M3t-Da-fIR"/>
-                            <constraint firstItem="CHz-9o-YWZ" firstAttribute="top" secondItem="iTL-H2-rsb" secondAttribute="bottom" id="iBU-Ho-B0C"/>
-                            <constraint firstItem="xau-5d-0k6" firstAttribute="top" secondItem="Vpo-BL-otb" secondAttribute="bottom" id="jBU-dg-vqq"/>
+                            <constraint firstItem="xau-5d-0k6" firstAttribute="top" secondItem="iTL-H2-rsb" secondAttribute="bottom" id="VQm-NZ-Vns"/>
+                            <constraint firstItem="xau-5d-0k6" firstAttribute="top" secondItem="Vpo-BL-otb" secondAttribute="bottom" constant="20" id="hTx-Kn-Mxc"/>
                             <constraint firstItem="iTL-H2-rsb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qiK-ib-nlL"/>
                             <constraint firstAttribute="trailing" secondItem="xau-5d-0k6" secondAttribute="trailing" id="sty-lz-87O"/>
+                            <constraint firstAttribute="bottom" secondItem="xau-5d-0k6" secondAttribute="bottom" id="uy3-BO-YyU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="iTL-H2-rsb" id="c2l-5k-mjB"/>
+                        <outlet property="pullUpView" destination="xau-5d-0k6" id="8Ee-1W-UCQ"/>
+                        <outlet property="pullUpViewHeightConstraint" destination="E4U-p3-JsB" id="V35-tM-Ogz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
