@@ -121,11 +121,14 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         addSwipe()
         addSpinner()
         addProgressLabel()
+        
         let touchPoint = sender.location(in: mapView)
         let touchCoordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
         
         let annotation = DroppablePin(coordinate: touchCoordinate, identifier: "droppablePin")
         mapView.addAnnotation(annotation)
+        
+        print(flickrURL(forApiKey: API_KEY, withAnnotation: annotation, andNumberOfPhotos: 40))
         
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(touchCoordinate, regionRadious * 2.0, regionRadious * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)

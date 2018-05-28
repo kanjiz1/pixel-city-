@@ -15,6 +15,7 @@
 		CD73887020B49DE100F33F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD73886F20B49DE100F33F61 /* Assets.xcassets */; };
 		CD73887320B49DE100F33F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD73887120B49DE100F33F61 /* LaunchScreen.storyboard */; };
 		CDC684CB20BC4CFB0072E595 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC684CA20BC4CFB0072E595 /* PhotoCell.swift */; };
+		CDC684CD20BCA6570072E595 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC684CC20BCA6570072E595 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		CD73887220B49DE100F33F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD73887420B49DE100F33F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDC684CA20BC4CFB0072E595 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		CDC684CC20BCA6570072E595 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D562E0BDFDE5EF45B675BF26 /* Pods-pixel-city.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixel-city.release.xcconfig"; path = "Pods/Target Support Files/Pods-pixel-city/Pods-pixel-city.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 		CD73887D20B49E1E00F33F61 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CDC684CC20BCA6570072E595 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -222,11 +225,17 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-pixel-city/Pods-pixel-city-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -240,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDC684CD20BCA6570072E595 /* Constants.swift in Sources */,
 				CDC684CB20BC4CFB0072E595 /* PhotoCell.swift in Sources */,
 				CD73886B20B49DE100F33F61 /* MapVC.swift in Sources */,
 				CD105E2120B4CE02005A8446 /* DroppablePin.swift in Sources */,
