@@ -31,6 +31,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     var flowLayout = UICollectionViewFlowLayout()
     
     var imageURLArray = [String]()
+    var imageArray = [UIImage()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +76,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     
     //animates bottom view downwards
     @objc func animateViewDown(){
+        cancelAllSessions()
         pullUpViewHeightConstraint.constant = 0
         UIView.animate(withDuration: 0.5) {
             self.view.layoutIfNeeded()
@@ -121,6 +123,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         removePin()
         removeProgressLabel()
         removeSpinner()
+        cancelAllSessions()
         
         animateViewUp()
         addSwipe()
@@ -138,8 +141,15 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(touchCoordinate, regionRadious * 2.0, regionRadious * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
         
-        retrieveURLs(forAnnotation: annotation) { (Bool) in
+        retrieveURLs(forAnnotation: annotation) { (finished) in
             print(self.imageURLArray)
+            if finished {
+                self.retrieveImages(handler: { (finished) in
+                    self.removeSpinner()
+                    self.removeProgressLabel()
+                    
+                })
+            }
         }
         
         print("Pin was dropped")
@@ -172,6 +182,31 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
                 self.imageURLArray.append(postUrl)
             }
             handler(true)
+        }
+    }
+    
+    //retrieving images from Flickr
+    func retrieveImages(handler: @escaping(_ status: Bool) -> ()){
+        imageArray = []
+        
+        for url in imageURLArray{
+            Alamofire.request(url).responseImage { (response) in
+                guard let image = response.result.value else {return}
+                self.imageArray.append(image)
+                self.progressLabel?.text = "\(self.imageArray.count)/40 images downloaded"
+                
+                if self.imageArray.count == self.imageURLArray.count{
+                    handler(true)
+                }
+            }
+        }
+    }
+    
+    //Cancelling Ongoing Sessions
+    func cancelAllSessions(){
+        Alamofire.SessionManager.default.session.getTasksWithCompletionHandler { (sessionDataTask, uploadData, downloadData) in
+            sessionDataTask.forEach({ $0.cancel() }) //another way at access forEach loop
+            downloadData.forEach({$0.cancel()})
         }
     }
 }

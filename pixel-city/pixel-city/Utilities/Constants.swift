@@ -9,7 +9,6 @@
 import Foundation
 
 
-
 func flickrURL(forApiKey key: String, withAnnotation annotation: DroppablePin, andNumberOfPhotos number: Int) -> String{
     
     
