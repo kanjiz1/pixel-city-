@@ -44,11 +44,10 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: flowLayout)
         collectionView?.register(PhotoCell.self, forCellWithReuseIdentifier: "photoCell")
         collectionView?.delegate = self
-        collectionView?.delegate = self
+        collectionView?.dataSource = self
         collectionView?.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
         
         pullUpView.addSubview(collectionView!)
-        
     }
     
     //double tap gesture
@@ -125,6 +124,10 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
         removeSpinner()
         cancelAllSessions()
         
+        imageArray = []
+        imageURLArray = []
+        collectionView?.reloadData()
+        
         animateViewUp()
         addSwipe()
         addSpinner()
@@ -147,7 +150,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
                 self.retrieveImages(handler: { (finished) in
                     self.removeSpinner()
                     self.removeProgressLabel()
-                    
+                    self.collectionView?.reloadData()
                 })
             }
         }
@@ -170,7 +173,6 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func retrieveURLs(forAnnotation annotation: DroppablePin, handler: @escaping(_ status: Bool) -> () ){
-        imageURLArray = []
         Alamofire.request(flickrURL(forApiKey: API_KEY, withAnnotation: annotation, andNumberOfPhotos: 40)).responseJSON { (response) in
             print(response)
             handler(true)
@@ -187,8 +189,6 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     
     //retrieving images from Flickr
     func retrieveImages(handler: @escaping(_ status: Bool) -> ()){
-        imageArray = []
-        
         for url in imageURLArray{
             Alamofire.request(url).responseImage { (response) in
                 guard let image = response.result.value else {return}
@@ -255,12 +255,22 @@ extension MapVC: UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return imageArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCell
-        return cell!
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCell else {return UICollectionViewCell() }
+        let imageFromIndex = imageArray[indexPath.row]
+        let imageView = UIImageView(image: imageFromIndex)
+        cell.addSubview(imageView)
+        return cell
+    }
+    
+    //passing image to other View Controller and presenting it
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let popVC = storyboard?.instantiateViewController(withIdentifier: "PopVC") as? PopVC else {return}
+        popVC.initData(forImage: imageArray[indexPath.row])
+        present(popVC, animated: true, completion: nil)
     }
 }
 

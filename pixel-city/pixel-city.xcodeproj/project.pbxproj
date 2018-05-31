@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		472E1C7CB78C64E982514CE0 /* Pods_pixel_city.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2074BEE76FBBCEEC629FFF46 /* Pods_pixel_city.framework */; };
 		CD105E2120B4CE02005A8446 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD105E2020B4CE02005A8446 /* DroppablePin.swift */; };
+		CD2C706220C032EE001497E9 /* PopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C706120C032EE001497E9 /* PopVC.swift */; };
 		CD73886920B49DE100F33F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73886820B49DE100F33F61 /* AppDelegate.swift */; };
 		CD73886B20B49DE100F33F61 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73886A20B49DE100F33F61 /* MapVC.swift */; };
 		CD73886E20B49DE100F33F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD73886C20B49DE100F33F61 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		2074BEE76FBBCEEC629FFF46 /* Pods_pixel_city.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pixel_city.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE26C62ABCB10B10AC85065 /* Pods-pixel-city.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixel-city.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pixel-city/Pods-pixel-city.debug.xcconfig"; sourceTree = "<group>"; };
 		CD105E2020B4CE02005A8446 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
+		CD2C706120C032EE001497E9 /* PopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopVC.swift; sourceTree = "<group>"; };
 		CD73886520B49DE100F33F61 /* pixel-city.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pixel-city.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD73886820B49DE100F33F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD73886A20B49DE100F33F61 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				CD73886A20B49DE100F33F61 /* MapVC.swift */,
+				CD2C706120C032EE001497E9 /* PopVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD2C706220C032EE001497E9 /* PopVC.swift in Sources */,
 				CDC684CD20BCA6570072E595 /* Constants.swift in Sources */,
 				CDC684CB20BC4CFB0072E595 /* PhotoCell.swift in Sources */,
 				CD73886B20B49DE100F33F61 /* MapVC.swift in Sources */,

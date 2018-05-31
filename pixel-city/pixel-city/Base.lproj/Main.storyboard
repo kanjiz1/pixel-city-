@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -90,6 +90,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--PopVC-->
+        <scene sceneID="DHL-D1-hDW">
+            <objects>
+                <viewController storyboardIdentifier="PopVC" id="mSD-zM-hOL" customClass="PopVC" customModule="pixel_city" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UHq-Qk-Ln5"/>
+                        <viewControllerLayoutGuide type="bottom" id="YdV-v5-vTb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="quW-pU-Akh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sAj-6u-iSL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aam-dh-QFt">
+                                <rect key="frame" x="87.5" y="622" width="200" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double Tap to Dismiss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pon-0K-khI">
+                                        <rect key="frame" x="12.5" y="0.5" width="175" height="24"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Pon-0K-khI" firstAttribute="centerX" secondItem="Aam-dh-QFt" secondAttribute="centerX" id="23T-x1-vjs"/>
+                                    <constraint firstItem="Pon-0K-khI" firstAttribute="centerY" secondItem="Aam-dh-QFt" secondAttribute="centerY" id="JUn-Dk-Km1"/>
+                                    <constraint firstAttribute="height" constant="25" id="R3k-Ip-gGO"/>
+                                    <constraint firstAttribute="width" constant="200" id="urb-sW-tRL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Aam-dh-QFt" firstAttribute="centerX" secondItem="quW-pU-Akh" secondAttribute="centerX" id="2XU-YY-9Gz"/>
+                            <constraint firstItem="YdV-v5-vTb" firstAttribute="top" secondItem="Aam-dh-QFt" secondAttribute="bottom" constant="20" id="EGO-1f-1pk"/>
+                            <constraint firstItem="sAj-6u-iSL" firstAttribute="top" secondItem="quW-pU-Akh" secondAttribute="top" id="ORu-cT-RIT"/>
+                            <constraint firstItem="sAj-6u-iSL" firstAttribute="leading" secondItem="quW-pU-Akh" secondAttribute="leading" id="Rsa-uT-g2f"/>
+                            <constraint firstAttribute="trailing" secondItem="sAj-6u-iSL" secondAttribute="trailing" id="kie-HY-zZD"/>
+                            <constraint firstItem="YdV-v5-vTb" firstAttribute="top" secondItem="sAj-6u-iSL" secondAttribute="bottom" id="vcj-jW-Glx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="popImageView" destination="sAj-6u-iSL" id="woA-U4-AvT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8D-N2-oa1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866.39999999999998" y="149.77511244377811"/>
         </scene>
     </scenes>
     <resources>
