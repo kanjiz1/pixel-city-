@@ -42,14 +42,16 @@ class PopVC: UIViewController , UIGestureRecognizerDelegate{
     }
     
     func makeMap(){
-        let location = CLLocationCoordinate2DMake(self.latitude, self.longitude)
-        let span = MKCoordinateSpanMake(1.5, 1.5)
-        let region = MKCoordinateRegionMake(location, span)
-        mapView.setRegion(region, animated: true)
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = location
-        annotation.title = "Taken here"
-        mapView.addAnnotation(annotation)
+        if (self.latitude != nil) && self.longitude != nil{
+            let location = CLLocationCoordinate2DMake(self.latitude, self.longitude)
+            let span = MKCoordinateSpanMake(0.000002, 0.000002)
+            let region = MKCoordinateRegionMake(location, span)
+            mapView.setRegion(region, animated: true)
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = location
+            annotation.title = "Taken here"
+            mapView.addAnnotation(annotation)
+        }
     }
     
     func retrieveURLS(handler: @escaping(_ status: Bool) -> () ){
