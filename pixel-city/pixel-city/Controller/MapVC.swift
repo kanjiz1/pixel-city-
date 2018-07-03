@@ -32,6 +32,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     
     var imageURLArray = [String]()
     var imageArray = [UIImage()]
+    var imageID = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -184,6 +185,8 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
             for photo in photosDictArray{
                 let postUrl = "https://farm\(photo["farm"]!).staticflickr.com/\(photo["server"]!)/\(photo["id"]!)_\(photo["secret"]!)_h_d.jpg"
                 self.imageURLArray.append(postUrl)
+                
+                self.imageID.append(photo["id"] as! String)
             }
             handler(true)
         }
@@ -272,6 +275,7 @@ extension MapVC: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let popVC = storyboard?.instantiateViewController(withIdentifier: "PopVC") as? PopVC else {return}
         popVC.initData(forImage: imageArray[indexPath.row])
+        popVC.id = imageID[indexPath.row]
         present(popVC, animated: true, completion: nil)
     }
 }
