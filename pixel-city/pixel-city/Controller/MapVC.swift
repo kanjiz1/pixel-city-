@@ -287,6 +287,7 @@ extension MapVC: UIViewControllerPreviewingDelegate{
         guard let popVC = storyboard?.instantiateViewController(withIdentifier: "PopVC")as? PopVC else {return nil}
         
         popVC.initData(forImage: imageArray[indexPath.row])
+        popVC.id = imageID[indexPath.row]
         
         previewingContext.sourceRect = cell.contentView.frame
         return popVC
