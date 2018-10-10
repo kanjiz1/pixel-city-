@@ -10,6 +10,8 @@
 		472E1C7CB78C64E982514CE0 /* Pods_pixel_city.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2074BEE76FBBCEEC629FFF46 /* Pods_pixel_city.framework */; };
 		CD105E2120B4CE02005A8446 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD105E2020B4CE02005A8446 /* DroppablePin.swift */; };
 		CD2C706220C032EE001497E9 /* PopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C706120C032EE001497E9 /* PopVC.swift */; };
+		CD33A643216E96AE00DFEEE7 /* pixel_cityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A642216E96AE00DFEEE7 /* pixel_cityTests.swift */; };
+		CD33A651216E96BE00DFEEE7 /* pixel_cityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33A650216E96BE00DFEEE7 /* pixel_cityUITests.swift */; };
 		CD73886920B49DE100F33F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73886820B49DE100F33F61 /* AppDelegate.swift */; };
 		CD73886B20B49DE100F33F61 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD73886A20B49DE100F33F61 /* MapVC.swift */; };
 		CD73886E20B49DE100F33F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD73886C20B49DE100F33F61 /* Main.storyboard */; };
@@ -19,11 +21,34 @@
 		CDC684CD20BCA6570072E595 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC684CC20BCA6570072E595 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CD33A645216E96AE00DFEEE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD73885D20B49DE000F33F61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD73886420B49DE100F33F61;
+			remoteInfo = "pixel-city";
+		};
+		CD33A653216E96BE00DFEEE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD73885D20B49DE000F33F61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD73886420B49DE100F33F61;
+			remoteInfo = "pixel-city";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2074BEE76FBBCEEC629FFF46 /* Pods_pixel_city.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pixel_city.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE26C62ABCB10B10AC85065 /* Pods-pixel-city.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixel-city.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pixel-city/Pods-pixel-city.debug.xcconfig"; sourceTree = "<group>"; };
 		CD105E2020B4CE02005A8446 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		CD2C706120C032EE001497E9 /* PopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopVC.swift; sourceTree = "<group>"; };
+		CD33A640216E96AE00DFEEE7 /* pixel-cityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pixel-cityTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD33A642216E96AE00DFEEE7 /* pixel_cityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pixel_cityTests.swift; sourceTree = "<group>"; };
+		CD33A644216E96AE00DFEEE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD33A64E216E96BE00DFEEE7 /* pixel-cityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pixel-cityUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD33A650216E96BE00DFEEE7 /* pixel_cityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pixel_cityUITests.swift; sourceTree = "<group>"; };
+		CD33A652216E96BE00DFEEE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD73886520B49DE100F33F61 /* pixel-city.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pixel-city.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD73886820B49DE100F33F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD73886A20B49DE100F33F61 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -37,6 +62,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CD33A63D216E96AE00DFEEE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD33A64B216E96BE00DFEEE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD73886220B49DE100F33F61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,10 +104,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CD33A641216E96AE00DFEEE7 /* pixel-cityTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD33A642216E96AE00DFEEE7 /* pixel_cityTests.swift */,
+				CD33A644216E96AE00DFEEE7 /* Info.plist */,
+			);
+			path = "pixel-cityTests";
+			sourceTree = "<group>";
+		};
+		CD33A64F216E96BE00DFEEE7 /* pixel-cityUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD33A650216E96BE00DFEEE7 /* pixel_cityUITests.swift */,
+				CD33A652216E96BE00DFEEE7 /* Info.plist */,
+			);
+			path = "pixel-cityUITests";
+			sourceTree = "<group>";
+		};
 		CD73885C20B49DE000F33F61 = {
 			isa = PBXGroup;
 			children = (
 				CD73886720B49DE100F33F61 /* pixel-city */,
+				CD33A641216E96AE00DFEEE7 /* pixel-cityTests */,
+				CD33A64F216E96BE00DFEEE7 /* pixel-cityUITests */,
 				CD73886620B49DE100F33F61 /* Products */,
 				8245CE79EB7FC72C5D2EFEA9 /* Pods */,
 				69019643BCA8C849549EBFBA /* Frameworks */,
@@ -79,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				CD73886520B49DE100F33F61 /* pixel-city.app */,
+				CD33A640216E96AE00DFEEE7 /* pixel-cityTests.xctest */,
+				CD33A64E216E96BE00DFEEE7 /* pixel-cityUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +188,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CD33A63F216E96AE00DFEEE7 /* pixel-cityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD33A649216E96AF00DFEEE7 /* Build configuration list for PBXNativeTarget "pixel-cityTests" */;
+			buildPhases = (
+				CD33A63C216E96AE00DFEEE7 /* Sources */,
+				CD33A63D216E96AE00DFEEE7 /* Frameworks */,
+				CD33A63E216E96AE00DFEEE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD33A646216E96AE00DFEEE7 /* PBXTargetDependency */,
+			);
+			name = "pixel-cityTests";
+			productName = "pixel-cityTests";
+			productReference = CD33A640216E96AE00DFEEE7 /* pixel-cityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD33A64D216E96BE00DFEEE7 /* pixel-cityUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD33A655216E96BE00DFEEE7 /* Build configuration list for PBXNativeTarget "pixel-cityUITests" */;
+			buildPhases = (
+				CD33A64A216E96BE00DFEEE7 /* Sources */,
+				CD33A64B216E96BE00DFEEE7 /* Frameworks */,
+				CD33A64C216E96BE00DFEEE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD33A654216E96BE00DFEEE7 /* PBXTargetDependency */,
+			);
+			name = "pixel-cityUITests";
+			productName = "pixel-cityUITests";
+			productReference = CD33A64E216E96BE00DFEEE7 /* pixel-cityUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		CD73886420B49DE100F33F61 /* pixel-city */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD73887720B49DE100F33F61 /* Build configuration list for PBXNativeTarget "pixel-city" */;
@@ -152,10 +249,18 @@
 		CD73885D20B49DE000F33F61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Oforkanji Odekpe";
 				TargetAttributes = {
+					CD33A63F216E96AE00DFEEE7 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = CD73886420B49DE100F33F61;
+					};
+					CD33A64D216E96BE00DFEEE7 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = CD73886420B49DE100F33F61;
+					};
 					CD73886420B49DE100F33F61 = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
@@ -175,11 +280,27 @@
 			projectRoot = "";
 			targets = (
 				CD73886420B49DE100F33F61 /* pixel-city */,
+				CD33A63F216E96AE00DFEEE7 /* pixel-cityTests */,
+				CD33A64D216E96BE00DFEEE7 /* pixel-cityUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CD33A63E216E96AE00DFEEE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD33A64C216E96BE00DFEEE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD73886320B49DE100F33F61 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,6 +361,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CD33A63C216E96AE00DFEEE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD33A643216E96AE00DFEEE7 /* pixel_cityTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD33A64A216E96BE00DFEEE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD33A651216E96BE00DFEEE7 /* pixel_cityUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD73886120B49DE100F33F61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,6 +391,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD33A646216E96AE00DFEEE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD73886420B49DE100F33F61 /* pixel-city */;
+			targetProxy = CD33A645216E96AE00DFEEE7 /* PBXContainerItemProxy */;
+		};
+		CD33A654216E96BE00DFEEE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD73886420B49DE100F33F61 /* pixel-city */;
+			targetProxy = CD33A653216E96BE00DFEEE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CD73886C20B49DE100F33F61 /* Main.storyboard */ = {
@@ -275,6 +425,94 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CD33A647216E96AF00DFEEE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W87L6W32DM;
+				INFOPLIST_FILE = "pixel-cityTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "oforkanjiodekpe.pixel-cityTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pixel-city.app/pixel-city";
+			};
+			name = Debug;
+		};
+		CD33A648216E96AF00DFEEE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W87L6W32DM;
+				INFOPLIST_FILE = "pixel-cityTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "oforkanjiodekpe.pixel-cityTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pixel-city.app/pixel-city";
+			};
+			name = Release;
+		};
+		CD33A656216E96BE00DFEEE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W87L6W32DM;
+				INFOPLIST_FILE = "pixel-cityUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "oforkanjiodekpe.pixel-cityUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "pixel-city";
+			};
+			name = Debug;
+		};
+		CD33A657216E96BE00DFEEE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W87L6W32DM;
+				INFOPLIST_FILE = "pixel-cityUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "oforkanjiodekpe.pixel-cityUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "pixel-city";
+			};
+			name = Release;
+		};
 		CD73887520B49DE100F33F61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -430,6 +668,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CD33A649216E96AF00DFEEE7 /* Build configuration list for PBXNativeTarget "pixel-cityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD33A647216E96AF00DFEEE7 /* Debug */,
+				CD33A648216E96AF00DFEEE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD33A655216E96BE00DFEEE7 /* Build configuration list for PBXNativeTarget "pixel-cityUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD33A656216E96BE00DFEEE7 /* Debug */,
+				CD33A657216E96BE00DFEEE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CD73886020B49DE000F33F61 /* Build configuration list for PBXProject "pixel-city" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
